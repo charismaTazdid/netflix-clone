@@ -1,0 +1,79 @@
+.nav {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    width: 100%;
+    height: 14px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    margin-bottom: 10px;
+}
+.navBlack {
+    background-color: #111;
+}
+.netflixLogo {
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    cursor: pointer;
+    width: 80px;
+    object-fit: contain;
+    border: 4px solid rgb(204, 1, 42);
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+.netflixAvatar {
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.logoutBtn {
+    background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
+    padding: 6px 28px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    border: none;
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .logoutBtn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  .userName{
+    position: fixed;
+    right: 150px;
+    top: 18px;
+    cursor: pointer;
+    padding: 2px 10px 8px 10px; 
+
+  }
+
+
+  @media only screen and (max-width: 576px) {
+  
+    .userName{
+      position: fixed;
+      right: 100px;
+      top: 18px;
+    }
+   .logoutBtn{
+    position: fixed;
+    right: 10px;
+    top: 15px;
+    padding: 7px 15px;
+   }
+};

@@ -1,0 +1,48 @@
+.movieDiv {
+    width: 300px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.rowPosterLarge {
+    /* object-fit: contain; */
+    min-height: 250px;
+    max-height: 270px;
+    transition: all 350ms;
+}
+.rowPosterLarge:hover {
+    transform: scale(1.4);
+    box-shadow: 5px 5px 156px 179px rgba(236, 162, 76, 0.75);
+    -webkit-box-shadow: 5px 5px 156px 179px rgba(223, 159, 87, 0.75);
+    -moz-box-shadow: 5px 5px 156px 179px rgba(224, 157, 79, 0.75);
+    z-index: 0;
+}
+
+.favBtn {
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    height: 30px;
+    /* position: relative;  */
+    left: -150px;
+    top: 230px; 
+    z-index: 1;
+    
+}
+
+.favBtn:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transform: scale(1.01);
+    transition: all 0.5s;
+}

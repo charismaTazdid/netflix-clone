@@ -1,0 +1,18 @@
+.notfound{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('../../images/catty2.jpg');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    height: 120vh;
+}
+.notfound > div> h2{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    max-width: 400px;
+  
+}

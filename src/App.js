@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import MyFavList from './components/MyFavList/MyFavList';
+import Authentication from './components/Authentication/Authentication';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import { createTheme, ThemeProvider } from '@mui/material';
+import NotFound from './components/NotFound/NotFound';
+import MyProfile from './components/MyProfile/MyProfile';
 
-function App() {
+const App = () => {
+  let theme = createTheme();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />}> </Route>
+            <Route path='/auth' element={<Authentication></Authentication>}> </Route>
+            <Route element={<PrivateRoute />} >
+              <Route path='/favourite' element={<MyFavList />}> </Route>
+            </Route>
+            <Route path='/profile' element={<MyProfile/>}> </Route>
+            <Route path='*' element={<NotFound/>}> </Route>
+          </Routes>
+        </ThemeProvider>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+
+
+//npm install -g firebase-tools
+//firebase login
+//firebase init
+// firebase deploy
