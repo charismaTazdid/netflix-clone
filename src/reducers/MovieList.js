@@ -10,7 +10,7 @@ const MovieList = (myList = [], action) => {
       return myList.filter((movie) => movie._id !== action.payload);
     default:
       return myList;
-  }
+  };
 };
 
 export default MovieList;

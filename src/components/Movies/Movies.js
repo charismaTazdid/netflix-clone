@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from '../../axious';
+import axios from '../../utils/axios';
 import styles from './Movies.module.css';
 import YouTube from 'react-youtube';
 import movieTrailer from "movie-trailer";
@@ -42,7 +42,7 @@ const Movies = ({ title, fecthUrl }) => {
             <div className={styles.rowposters}>
                 {
                     movies.map(movie =>
-                        <Movie movie={movie} showTrailer={showTrailer}  key={movie.id}/>
+                        <Movie movie={movie} showTrailer={showTrailer} key={movie.id} />
                     )
                 }
             </div>

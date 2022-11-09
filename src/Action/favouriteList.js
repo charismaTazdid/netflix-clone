@@ -10,7 +10,7 @@ export const addToFavourite = movie => async dispatch => {
   };
 };
 
-export const getMyFavouriteList = email => async dispatch => {
+export const getMyFavouriteList = (email) => async dispatch => {
   try {
     const { data } = await API.getMyFavouriteList(email);
     dispatch({ type: FETCH_MY_LIST, payload: data });

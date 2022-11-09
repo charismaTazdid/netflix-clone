@@ -30,7 +30,7 @@ const FavMovie = ({ movie }) => {
 
   return (
     <Container>
-        <Dialog dialogopen={dialogopen} setDialogOpen={setDialogOpen} />
+      <Dialog dialogopen={dialogopen} setDialogOpen={setDialogOpen} />
 
       <Card className={classes.card} raised elevation={10}>
         <div className={classes.cardContent} >
@@ -39,7 +39,7 @@ const FavMovie = ({ movie }) => {
           {
             <div className={classes.overlay2}>
               <Button style={{ color: 'white' }} size="small"
-               onClick={handleDialogOpen} >
+                onClick={handleDialogOpen} >
                 <MoreHoriz fontSize='large'> </MoreHoriz>
               </Button>
             </div>
@@ -73,5 +73,3 @@ const FavMovie = ({ movie }) => {
 };
 
 export default FavMovie;
-
-

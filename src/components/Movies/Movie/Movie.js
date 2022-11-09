@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToFavourite } from '../../../Action/favouriteList';
 import styles from './Movie.module.css';
-import  CoustomAlert  from './Alert';
+import CoustomAlert from './CoustomAlert';
 import { Alert } from '@mui/material';
 
 const Movie = ({ movie, showTrailer }) => {
-    const userData = JSON.parse(localStorage.getItem('profile'));
+
+    const userData = useSelector(state => state.auth.authData);
     const baseUrl = "https://image.tmdb.org/t/p/original/";
-    const user = useSelector(state => state?.auth?.authData?.user);
     const [showSuccess, setShowSuccess] = useState(false);
     const [alertOpen, setAlertOpen] = useState(false);
 
@@ -24,7 +24,7 @@ const Movie = ({ movie, showTrailer }) => {
             userEamil: userData?.user?.email,
             userName: userData?.user?.name
         }
-        if (user) {
+        if (userData) {
             dispatch(addToFavourite(movieData));
             setTimeout(() => {
                 setShowSuccess(true);
@@ -38,13 +38,13 @@ const Movie = ({ movie, showTrailer }) => {
     };
     return (
         <>
-        {// if user not logged in then we want to show this alert
-            alertOpen && 
-            <CoustomAlert alertOpen={alertOpen} setAlertOpen={setAlertOpen}/>
-        }
+            {// if user not logged in then we want to show this alert
+                alertOpen &&
+                <CoustomAlert alertOpen={alertOpen} setAlertOpen={setAlertOpen} />
+            }
             <div className={styles.movieDiv}>
                 {
-                    showSuccess && 
+                    showSuccess &&
                     <Alert severity="success"> Successfully Added to your list</Alert>
                 }
                 <img

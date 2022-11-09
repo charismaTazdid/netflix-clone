@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../../axious';
-import requests from '../../dataUrl';
+import axios from '../../utils/axios';
+import requests from '../../utils/dataUrl';
 import styles from './TopBanner.module.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ const TobBanner = () => {
 
         setTimeout(() => {
             setPlayMovie(false)
-        }, 2000);
+        }, 1500);
     };
 
 
@@ -60,9 +60,10 @@ const TobBanner = () => {
                 palyMovie &&
                 <div className={styles.playMovieContainer}>
                     <div className={styles.playMovie}>
-                        <h4>Thsi feture comming sooon...</h4>
+                        <h4>This feture comming sooon...</h4>
                         <h2>Lazy Developer Sleeping Now...</h2>
                     </div>
+
                 </div>
             }
             <div className={styles.bannerFadeBtm}>

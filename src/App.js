@@ -8,9 +8,14 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { createTheme, ThemeProvider } from '@mui/material';
 import NotFound from './components/NotFound/NotFound';
 import MyProfile from './components/MyProfile/MyProfile';
+import { useDispatch } from 'react-redux';
+import { authStateChanged } from './Action/AuthAction';
 
 const App = () => {
+  
   let theme = createTheme();
+  const dispatch = useDispatch();
+  dispatch(authStateChanged());
 
   return (
     <div className="App">
@@ -23,8 +28,8 @@ const App = () => {
             <Route element={<PrivateRoute />} >
               <Route path='/favourite' element={<MyFavList />}> </Route>
             </Route>
-            <Route path='/profile' element={<MyProfile/>}> </Route>
-            <Route path='*' element={<NotFound/>}> </Route>
+            <Route path='/profile' element={<MyProfile />}> </Route>
+            <Route path='*' element={<NotFound />}> </Route>
           </Routes>
         </ThemeProvider>
       </Router>
@@ -34,9 +39,3 @@ const App = () => {
 
 export default App;
 
-
-
-//npm install -g firebase-tools
-//firebase login
-//firebase init
-// firebase deploy

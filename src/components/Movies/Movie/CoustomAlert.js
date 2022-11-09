@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -50,7 +50,7 @@ BootstrapDialogTitle.propTypes = {
     onClose: PropTypes.func.isRequired,
 };
 
-export default function CustomizedDialogs({ alertOpen, setAlertOpen }) {
+ const CoustomAlert = ({ alertOpen, setAlertOpen }) => {
     const navigate = useNavigate();
     const handleClose = () => {
         setAlertOpen(false);
@@ -89,3 +89,5 @@ export default function CustomizedDialogs({ alertOpen, setAlertOpen }) {
         </div>
     );
 }
+
+export default CoustomAlert;

@@ -27,7 +27,7 @@ export const registerNewuser = (email, password, fullName, location, navigate) =
             const userData = result.user;
             const token = userData.accessToken;
             const user = { name: fullName, email: userData.email, img: userData?.photoURL }
-            //send user's name to firebase
+
             updateProfile(auth.currentUser, {
                 displayName: fullName,
             })
@@ -53,7 +53,6 @@ export const loginUser = (email, password, location, navigate) => async (dispatc
             dispatch({ type: 'AUTH', data: { user, token } });
             const destination = location?.state?.from || '/';
             navigate(destination)
-            console.log('login success', user)
         })
         .catch((error) => {
             console.log(error)

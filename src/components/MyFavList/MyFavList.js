@@ -1,5 +1,5 @@
-import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
+import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyFavouriteList } from '../../Action/favouriteList';
 import FavMovie from './FavMovie/FavMovie';
@@ -9,12 +9,14 @@ const MyFavList = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
+  const loggedInUser = useSelector((state) => state.auth.authData);
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('profile'));
-    dispatch(getMyFavouriteList(user?.user?.email))
-  }, [dispatch])
+    dispatch(getMyFavouriteList(loggedInUser?.user?.email));
+  }, [loggedInUser, dispatch]);
 
   const myList = useSelector(state => state?.MovieList);
+  console.log(myList);
+  console.log(loggedInUser);
   return (
     <div className={classes.container}>
       <Container >
@@ -26,11 +28,11 @@ const MyFavList = () => {
               <Typography variant='h4'> NO FAVOURITE </Typography>
               <Typography variant='h4'> MOVIE FOUND </Typography>
               <Typography variant='body'> go to home page and add make your Favourite List </Typography>
-              
+
             </div>
           </div>
         }
-        
+
         <Grid className={classes.mainContainer} container alignItems='stretch' spacing={3} >
 
           {
