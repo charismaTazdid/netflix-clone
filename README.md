@@ -15,7 +15,7 @@ also, users can make their Favourite movie list here. To make Your Favourite lis
 #
 
 ## Home Page
-<img alt="Crypto Bazaar" src="https://user-images.githubusercontent.com/69608939/199808032-fec57213-ddba-4d85-a64d-94c2e18074b3.png" height="80%"  />
+<img alt="home" src="https://user-images.githubusercontent.com/69608939/199808032-fec57213-ddba-4d85-a64d-94c2e18074b3.png" height="80%"  />
 
 ## Favourite List page
 
