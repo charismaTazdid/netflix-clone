@@ -17,7 +17,7 @@ export const signInWithGoogle = (location, navigate) => async (dispatch) => {
             navigate(destination);
         })
         .catch((error) => {
-            console.log(error)
+            // console.log(error)
         })
 };
 
@@ -33,14 +33,14 @@ export const registerNewuser = (email, password, fullName, location, navigate) =
             })
                 .then(() => { })
                 .catch((error) => {
-                    console.log(error)
+                    // console.log(error)
                 });
             dispatch({ type: 'AUTH', data: { user, token } });
             const destination = location?.state?.from || '/';
             navigate(destination)
         })
         .catch((error) => {
-            console.log(error.code, error.message)
+            // console.log(error.code, error.message)
         })
 };
 
@@ -55,7 +55,7 @@ export const loginUser = (email, password, location, navigate) => async (dispatc
             navigate(destination)
         })
         .catch((error) => {
-            console.log(error)
+            // console.log(error)
         })
 };
 

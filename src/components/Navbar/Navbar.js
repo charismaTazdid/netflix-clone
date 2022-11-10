@@ -24,7 +24,7 @@ const Navbar = () => {
                 setUser(null);
                 navigate('/');
             }).catch((error) => {
-                console.log(error);
+                // console.log(error);
             });
     };
 

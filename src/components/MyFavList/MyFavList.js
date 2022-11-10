@@ -15,8 +15,7 @@ const MyFavList = () => {
   }, [loggedInUser, dispatch]);
 
   const myList = useSelector(state => state?.MovieList);
-  console.log(myList);
-  console.log(loggedInUser);
+ 
   return (
     <div className={classes.container}>
       <Container >

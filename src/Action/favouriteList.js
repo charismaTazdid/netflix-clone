@@ -6,7 +6,7 @@ export const addToFavourite = movie => async dispatch => {
     const { data } = await API.addToFavourite(movie);
     dispatch({ type: ADD, payload: data });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   };
 };
 
@@ -15,7 +15,7 @@ export const getMyFavouriteList = (email) => async dispatch => {
     const { data } = await API.getMyFavouriteList(email);
     dispatch({ type: FETCH_MY_LIST, payload: data });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -24,6 +24,6 @@ export const deleteFromList = (id) => async dispatch => {
     await API.deleteFromList(id);
     dispatch({ type: REMOVE, payload: id });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
