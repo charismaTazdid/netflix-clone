@@ -46,7 +46,7 @@ Fullstack Netflix clone with react.js, redux, css module, MUI , React router for
 
 ## Live Site Link:
 
-<a style="background-color: darkgray; padding: 8px 50px; margin: 13px 0px; border-radius: 5px; text-decoration: none; color: darkblue; font-weight:bold;" href="https://netflix-clone-rta.netlify.app/"> Click To View Live Site </a>
+<a style="background-color: darkgray; padding: 8px 50px; margin: 13px 0px; border-radius: 5px; text-decoration: none; color: darkblue; font-weight:bold;" href="https://netfixclonebyrt.netlify.app/"> Click To View Live Site </a>
 
 </br>
 </br>
