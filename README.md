@@ -15,6 +15,7 @@ also, users can make their Favourite movie list here. To make Your Favourite lis
 #
 
 ## Home Page
+
 <img alt="home" src="https://user-images.githubusercontent.com/69608939/199808032-fec57213-ddba-4d85-a64d-94c2e18074b3.png" height="80%"  />
 
 ## Favourite List page
@@ -43,19 +44,19 @@ also, users can make their Favourite movie list here. To make Your Favourite lis
 <p>Built with react.js, redux, MUI and node.js with nest.js framework!
 Fullstack Netflix clone with react.js, redux, css module, MUI , React router for frontend. And  node.js, nest.js and typescript for Server side. also I used Firebase for authentication and deployment. </p>
 
-# Live Site Link:
+## Live Site Link:
 
 <a style="background-color: darkgray; padding: 8px 50px; margin: 13px 0px; border-radius: 5px; text-decoration: none; color: darkblue; font-weight:bold;" href="https://netflix-clone-rta.netlify.app/"> Click To View Live Site </a>
 
 </br>
-
-## live site Link: https://netflix-clone-rta.netlify.app/
-
 </br>
 
 ## server side code link:
 
 <a style="background-color: darkgray; padding: 8px 50px; border-radius: 3px; text-decoration: none; color: darkblue; font-weight:bold;" href="https://github.com/raihan-tajdid007/netflix-server-nestjs"> Click To View Server Side Code </a>
+
+</br>
+</br>
 
 ## Author:
 
